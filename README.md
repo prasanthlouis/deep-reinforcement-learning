@@ -35,3 +35,16 @@ Indirectly teaching the agent to recognize the value of different states and the
 Policy-Based Methods
 Deterministic: a policy at a given state will always return the same action.
 Stochastic: outputs a probability distribution over actions.
+
+Let's illustrate this with an example related to a stochastic policy in reinforcement learning:
+
+Suppose we have a simple environment where an agent can choose between three actions: "Move left," "Move right," and "Stay still." Given the current state of the environment, our stochastic policy needs to decide the probabilities of each action.
+
+Let's say our stochastic policy for this scenario outputs the following probability distribution:
+
+Probability of "Move left" = 0.4
+Probability of "Move right" = 0.3
+Probability of "Stay still" = 0.3
+This distribution indicates that, given the current state, there's a 40% chance that the agent will choose to "Move left," a 30% chance it will "Move right," and a 30% chance it will "Stay still."
+
+So, when the agent observes this state, it consults the stochastic policy and samples an action based on these probabilities. For example, it might randomly select "Move left" 40% of the time, "Move right" 30% of the time, and "Stay still" 30% of the time, ensuring that over many trials, the agent's actions reflect the probabilities specified by the policy.
