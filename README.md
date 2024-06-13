@@ -28,3 +28,7 @@ We define a discount rate called gamma. It must be between 0 and 1. Most of the 
 The larger the gamma, the smaller the discount. This means our agent cares more about the long-term reward.
 On the other hand, the smaller the gamma, the bigger the discount. This means our agent cares more about the short term reward (the nearest cheese).
 Then, each reward will be discounted by gamma to the exponent of the time step. As the time step increases, the cat gets closer to us, so the future reward is less and less likely to happen.
+
+Episodic vs continuing tasks
+Episodic: In this case, we have a starting point and an ending point. Eg super mario bros -> beginning of level -> ends when you die or completes the level
+Continuing: These are tasks that continue forever (no terminal state). In this case, the agent must learn how to choose the best actions and simultaneously interact with the environment. Eg automatic stock trading. You must decide when to end it  
