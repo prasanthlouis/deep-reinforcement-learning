@@ -1,19 +1,21 @@
-Title: Exploring Deep Reinforcement Learning
+Title: Exploring the Depths of Deep Reinforcement Learning
 
-Tools: We're using Baselines3 from stable-baselines3.readthedocs.io.
+Tools Utilized: We're leveraging Baselines3 from stable-baselines3.readthedocs.io.
 
-Reinforcement learning helps us solve control tasks, where agents learn by interacting with the environment, getting rewards for their actions.
+Reinforcement learning, at its essence, provides a framework for addressing control tasks, wherein agents learn to navigate environments through interaction, learning from trial and error while receiving feedback in the form of rewards or penalties.
 
-At its core, RL is about maximizing future rewards. Agents use the current state to decide what to do next, without needing to remember everything.
+Reward Hypothesis: Central to RL is the concept of maximizing expected cumulative rewards. This means that agents aim to make decisions that lead to the best possible outcomes over time, based on the rewards they expect to receive.
 
-State vs. Observation: In some cases, we see the full state (like in chess), while in others, we only get part of it (like in Super Mario Bros.).
+Markov Property: RL agents rely on the Markov Property, which states that the future depends only on the current state, not on the entire history of states and actions. This simplifies decision-making, as agents only need to consider their current situation.
 
-Discrete vs. Continuous Actions: Some actions are finite (like in Super Mario Bros.), while others have infinite possibilities (like driving a car).
+Differentiating State from Observation: Environments can be fully observed, where agents have access to complete information about the state (e.g., chess), or partially observed, where agents only receive partial information (e.g., Super Mario Bros.).
 
-Understanding Cumulative Reward with Gamma: We add up rewards over time, adjusting for how predictable they are. Gamma lets us balance short-term and long-term rewards.
+Discrete vs. Continuous Actions: Actions in RL can be discrete, with a finite number of options (e.g., moving in a grid-based game like Super Mario Bros.), or continuous, with an infinite range of possibilities (e.g., controlling a vehicle).
 
-Episodic vs. Continuing Tasks: Some tasks have clear start and end points (like levels in Super Mario Bros.), while others keep going (like stock trading).
+Understanding Cumulative Reward with Gamma: The cumulative reward is the sum of rewards obtained over time. Gamma is introduced as a discount factor to balance immediate rewards against future rewards, allowing agents to prioritize short-term gains or long-term objectives.
 
-Exploration/Exploitation Trade-off: We balance trying new things and sticking with what works to maximize rewards.
+Episodic vs. Continuing Tasks: Tasks in RL can be episodic, with clear start and end points (e.g., completing a level in a game), or continuing, where there is no defined endpoint (e.g., ongoing financial trading).
 
-Downside of Just Exploiting: Sometimes, focusing only on what we know means missing out on big rewards. Balancing exploration and exploitation helps us find the best outcomes.
+Exploration/Exploitation Trade-off: Agents face the challenge of balancing exploration (trying new actions to discover potentially better strategies) and exploitation (leveraging known strategies to maximize immediate rewards) to achieve optimal performance.
+
+Downside of Just Exploiting: Focusing solely on exploiting known strategies may lead agents to miss out on potentially higher rewards that could be obtained through exploration. Striking the right balance between exploration and exploitation is crucial for achieving success in RL tasks.
