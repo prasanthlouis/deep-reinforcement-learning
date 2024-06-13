@@ -1,38 +1,23 @@
-# deep-reinforcement-learning
-Deep Reinforcement Learning
+Title: Delving into Deep Reinforcement Learning
 
-Tools Used:
-This uses: Baselines3 https://stable-baselines3.readthedocs.io/en/master/
+Tools Employed:
+This utilizes: Baselines3 from https://stable-baselines3.readthedocs.io/en/master/
 
+Reinforcement learning serves as a framework to tackle control tasks, also known as decision problems, by crafting agents that glean knowledge from the environment through interaction, trial, and error, receiving rewards, either positive or negative, as their sole feedback.
 
-Reinforcement learning is a framework for solving control tasks (also called decision problems) by building agents that learn from the environment by interacting with it through trial and error and receiving rewards (positive or negative) as unique feedback.
+At its core, RL rests upon the reward hypothesis, positing that all objectives are describable as the maximization of the anticipated return, or expected cumulative reward. Leveraging the Markov Property, our agents necessitate solely the current state to determine their next action, obviating the requirement for an exhaustive history of previous states and actions.
 
-RL is based on the reward hypothesis, which is that all goals can be described as the maximization of the expected return (expected cumulative reward).
-Markov Property implies that our agent needs only the current state to decide what action to take and not the history of all the states and actions they took before.
+Distinguishing State from Observation:
+In fully observed environments, a state (s) offers a comprehensive depiction of the world's state, devoid of concealed information, as seen in chess. Conversely, an observation (o) provides a partial portrayal of the state in environments characterized by partial observation, akin to Super Mario Bros.
 
-State vs Observation
-State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment. Eg Chess
-Observation o: is a partial description of the state. In a partially observed environment. Eg Super mario bros
+Discerning Discrete Space versus Continuous Space:
+Discrete space entails a finite array of potential actions, exemplified in games like Super Mario Bros., where actions like moving up, down, left, and right are finite. Conversely, continuous space involves an infinite spectrum of potential actions, as encountered in activities like driving, where options such as steering at various angles and honking are limitless.
 
-Discrete Space vs Continuous Space
-Discrete space: the number of possible actions is finite. Eg super mario bros you can go up, down, left and right
-Continuous space: the number of possible actions is infinite. Eg driving a car has infinite actions. You can turn the car 10 degrees, 11, honk, etc
+Understanding Cumulative Reward with Gamma:
+The cumulative reward, expressed as Σ [rt + (γ^k) rt+1], wherein t represents time, requires a nuanced approach due to the varying predictability of rewards over time. To address this, a discount rate, gamma, ranging between 0 and 1, is introduced. Adjusting gamma allows for fine-tuning the agent's focus between short-term and long-term rewards.
 
-How Cumulative Reward works with Gamma
-The cumulative reward = rt+1 (rt+k+1 = rt+0+1 = rt+1)+ rt+2 (rt+k+1 = rt+1+1 = rt+2) + ... where t is time
-However, in reality, we can’t just add them like that. The rewards that come sooner (at the beginning of the game) are more likely to happen since they are more predictable than the long-term future reward.
+Episodic versus Continuing Tasks:
+Episodic tasks exhibit defined starting and ending points, exemplified by Super Mario Bros., where the level concludes upon the player's demise or completion. In contrast, continuing tasks lack terminal states, perpetually challenging agents to optimize actions while engaging with the environment, such as in automatic stock trading.
 
-To discount the rewards, we proceed like this:
-
-We define a discount rate called gamma. It must be between 0 and 1. Most of the time between 0.95 and 0.99.
-The larger the gamma, the smaller the discount. This means our agent cares more about the long-term reward.
-On the other hand, the smaller the gamma, the bigger the discount. This means our agent cares more about the short term reward (the nearest cheese).
-Then, each reward will be discounted by gamma to the exponent of the time step. As the time step increases, the cat gets closer to us, so the future reward is less and less likely to happen.
-
-Episodic vs continuing tasks
-Episodic: In this case, we have a starting point and an ending point. Eg super mario bros -> beginning of level -> ends when you die or completes the level
-Continuing: These are tasks that continue forever (no terminal state). In this case, the agent must learn how to choose the best actions and simultaneously interact with the environment. Eg automatic stock trading. You must decide when to end it  
-
-The Exploration/Exploitation trade-off
-Exploration is exploring the environment by trying random actions in order to find more information about the environment.
-Exploitation is exploiting known information to maximize the reward.
+Navigating the Exploration/Exploitation Trade-off:
+Exploration entails venturing into the environment via random actions to glean further insights, while exploitation involves leveraging known information to maximize rewards. Balancing these opposing strategies is pivotal for effective decision-making within the realm of reinforcement learning.
