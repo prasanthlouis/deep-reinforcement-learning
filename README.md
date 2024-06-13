@@ -32,3 +32,7 @@ Then, each reward will be discounted by gamma to the exponent of the time step. 
 Episodic vs continuing tasks
 Episodic: In this case, we have a starting point and an ending point. Eg super mario bros -> beginning of level -> ends when you die or completes the level
 Continuing: These are tasks that continue forever (no terminal state). In this case, the agent must learn how to choose the best actions and simultaneously interact with the environment. Eg automatic stock trading. You must decide when to end it  
+
+The Exploration/Exploitation trade-off
+Exploration is exploring the environment by trying random actions in order to find more information about the environment.
+Exploitation is exploiting known information to maximize the reward.
