@@ -31,3 +31,7 @@ We can train our agent to find the optimal policy π* using two methods:
 Policy vs Value Based
 Directly instructing the agent to learn the best action to take based on the current state. This is known as Policy-Based Methods.
 Indirectly teaching the agent to recognize the value of different states and then choosing actions that lead to the most valuable states. These are called Value-Based Methods.
+
+Policy-Based Methods
+Deterministic: a policy at a given state will always return the same action.
+Stochastic: outputs a probability distribution over actions.
