@@ -1,32 +1,19 @@
-Title: Delving into Deep Reinforcement Learning
+Title: Exploring Deep Reinforcement Learning
 
-Tools Employed:
-This utilizes: Baselines3 from https://stable-baselines3.readthedocs.io/en/master/
+Tools: We're using Baselines3 from stable-baselines3.readthedocs.io.
 
-Reinforcement learning serves as a framework to tackle control tasks, also known as decision problems, by crafting agents that glean knowledge from the environment through interaction, trial, and error, receiving rewards, either positive or negative, as their sole feedback.
+Reinforcement learning helps us solve control tasks, where agents learn by interacting with the environment, getting rewards for their actions.
 
-At its core, RL rests upon the reward hypothesis, positing that all objectives are describable as the maximization of the anticipated return, or expected cumulative reward. Leveraging the Markov Property, our agents necessitate solely the current state to determine their next action, obviating the requirement for an exhaustive history of previous states and actions.
+At its core, RL is about maximizing future rewards. Agents use the current state to decide what to do next, without needing to remember everything.
 
-Distinguishing State from Observation:
-In fully observed environments, a state (s) offers a comprehensive depiction of the world's state, devoid of concealed information, as seen in chess. Conversely, an observation (o) provides a partial portrayal of the state in environments characterized by partial observation, akin to Super Mario Bros.
+State vs. Observation: In some cases, we see the full state (like in chess), while in others, we only get part of it (like in Super Mario Bros.).
 
-Discerning Discrete Space versus Continuous Space:
-Discrete space entails a finite array of potential actions, exemplified in games like Super Mario Bros., where actions like moving up, down, left, and right are finite. Conversely, continuous space involves an infinite spectrum of potential actions, as encountered in activities like driving, where options such as steering at various angles and honking are limitless.
+Discrete vs. Continuous Actions: Some actions are finite (like in Super Mario Bros.), while others have infinite possibilities (like driving a car).
 
-Understanding Cumulative Reward with Gamma:
-The cumulative reward, expressed as Σ [rt + (γ^k) rt+1], wherein t represents time, requires a nuanced approach due to the varying predictability of rewards over time. To address this, a discount rate, gamma, ranging between 0 and 1, is introduced. Adjusting gamma allows for fine-tuning the agent's focus between short-term and long-term rewards.
+Understanding Cumulative Reward with Gamma: We add up rewards over time, adjusting for how predictable they are. Gamma lets us balance short-term and long-term rewards.
 
-Episodic versus Continuing Tasks:
-Episodic tasks exhibit defined starting and ending points, exemplified by Super Mario Bros., where the level concludes upon the player's demise or completion. In contrast, continuing tasks lack terminal states, perpetually challenging agents to optimize actions while engaging with the environment, such as in automatic stock trading.
+Episodic vs. Continuing Tasks: Some tasks have clear start and end points (like levels in Super Mario Bros.), while others keep going (like stock trading).
 
-Navigating the Exploration/Exploitation Trade-off:
-Exploration entails venturing into the environment via random actions to glean further insights, while exploitation involves leveraging known information to maximize rewards. Balancing these opposing strategies is pivotal for effective decision-making within the realm of reinforcement learning.
+Exploration/Exploitation Trade-off: We balance trying new things and sticking with what works to maximize rewards.
 
-Downside to just using exploitation
-In this game scenario, our mouse encounters an array of small cheese pieces, each offering a modest reward of +1. Yet, nestled at the maze's zenith lies a colossal cache of cheese, granting a substantial reward of +1000.
-
-However, fixating solely on exploitation means our agent will perpetually overlook the lucrative jackpot atop the maze. Instead, it will opt for the closest, albeit smaller, sources of rewards, prioritizing exploitation.
-
-Yet, by incorporating a degree of exploration, our agent stands to uncover the grand prize—the hefty mound of cheese.
-
-This epitomizes the exploration/exploitation trade-off, wherein we must strike a delicate balance between venturing into uncharted territories of the environment and capitalizing on our existing knowledge thereof.
+Downside of Just Exploiting: Sometimes, focusing only on what we know means missing out on big rewards. Balancing exploration and exploitation helps us find the best outcomes.
