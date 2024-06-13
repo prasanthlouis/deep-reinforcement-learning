@@ -20,9 +20,14 @@ Exploration/Exploitation Trade-off: Agents face the challenge of balancing explo
 
 Downside of Just Exploiting: Focusing solely on exploiting known strategies may lead agents to miss out on potentially higher rewards that could be obtained through exploration. Striking the right balance between exploration and exploitation is crucial for achieving success in RL tasks.
 
-The Policy π: the agent’s decision-maker
+The Policy π
 The Policy π is like the brain of our Agent. It's the function that guides the Agent's actions based on its current situation. In simpler terms, it's what determines what the Agent does at any given moment.
 
 Think of the Policy as the decision-maker for our Agent. It's the function that tells us which action to take when we're in a certain situation.
 
 Our aim is to learn this Policy, which means finding the best possible way for the Agent to behave. We call this best Policy π*. We achieve this through training.
+
+We can train our agent to find the optimal policy π* using two methods:
+Policy vs Value Based
+Directly instructing the agent to learn the best action to take based on the current state. This is known as Policy-Based Methods.
+Indirectly teaching the agent to recognize the value of different states and then choosing actions that lead to the most valuable states. These are called Value-Based Methods.
