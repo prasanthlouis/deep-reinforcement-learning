@@ -10,3 +10,6 @@ Markov Property implies that our agent needs only the current state to decide wh
 
 State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment. Eg Chess
 Observation o: is a partial description of the state. In a partially observed environment. Eg Super mario bros
+
+Discrete space: the number of possible actions is finite. Eg super mario bros you can go up, down, left and right
+Continuous space: the number of possible actions is infinite. Eg driving a car has infinite actions. You can turn the car 10 degrees, 11, honk, etc
