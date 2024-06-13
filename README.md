@@ -13,3 +13,6 @@ Observation o: is a partial description of the state. In a partially observed en
 
 Discrete space: the number of possible actions is finite. Eg super mario bros you can go up, down, left and right
 Continuous space: the number of possible actions is infinite. Eg driving a car has infinite actions. You can turn the car 10 degrees, 11, honk, etc
+
+The cumulative reward = rt+1 (rt+k+1 = rt+0+1 = rt+1)+ rt+2 (rt+k+1 = rt+1+1 = rt+2) + ... where t is time
+However, in reality, we can’t just add them like that. The rewards that come sooner (at the beginning of the game) are more likely to happen since they are more predictable than the long-term future reward.
