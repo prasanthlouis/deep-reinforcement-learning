@@ -7,3 +7,6 @@ Reinforcement learning is a framework for solving control tasks (also called dec
 
 RL is based on the reward hypothesis, which is that all goals can be described as the maximization of the expected return (expected cumulative reward).
 Markov Property implies that our agent needs only the current state to decide what action to take and not the history of all the states and actions they took before.
+
+State s: is a complete description of the state of the world (there is no hidden information). In a fully observed environment. Eg Chess
+Observation o: is a partial description of the state. In a partially observed environment. Eg Super mario bros
