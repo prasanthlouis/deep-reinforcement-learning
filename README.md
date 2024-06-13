@@ -21,3 +21,12 @@ Episodic tasks exhibit defined starting and ending points, exemplified by Super 
 
 Navigating the Exploration/Exploitation Trade-off:
 Exploration entails venturing into the environment via random actions to glean further insights, while exploitation involves leveraging known information to maximize rewards. Balancing these opposing strategies is pivotal for effective decision-making within the realm of reinforcement learning.
+
+Downside to just using exploitation
+In this game scenario, our mouse encounters an array of small cheese pieces, each offering a modest reward of +1. Yet, nestled at the maze's zenith lies a colossal cache of cheese, granting a substantial reward of +1000.
+
+However, fixating solely on exploitation means our agent will perpetually overlook the lucrative jackpot atop the maze. Instead, it will opt for the closest, albeit smaller, sources of rewards, prioritizing exploitation.
+
+Yet, by incorporating a degree of exploration, our agent stands to uncover the grand prize—the hefty mound of cheese.
+
+This epitomizes the exploration/exploitation trade-off, wherein we must strike a delicate balance between venturing into uncharted territories of the environment and capitalizing on our existing knowledge thereof.
