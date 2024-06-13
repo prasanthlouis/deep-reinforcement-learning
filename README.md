@@ -16,3 +16,10 @@ Continuous space: the number of possible actions is infinite. Eg driving a car h
 
 The cumulative reward = rt+1 (rt+k+1 = rt+0+1 = rt+1)+ rt+2 (rt+k+1 = rt+1+1 = rt+2) + ... where t is time
 However, in reality, we can’t just add them like that. The rewards that come sooner (at the beginning of the game) are more likely to happen since they are more predictable than the long-term future reward.
+
+To discount the rewards, we proceed like this:
+
+We define a discount rate called gamma. It must be between 0 and 1. Most of the time between 0.95 and 0.99.
+The larger the gamma, the smaller the discount. This means our agent cares more about the long-term reward.
+On the other hand, the smaller the gamma, the bigger the discount. This means our agent cares more about the short term reward (the nearest cheese).
+Then, each reward will be discounted by gamma to the exponent of the time step. As the time step increases, the cat gets closer to us, so the future reward is less and less likely to happen.
