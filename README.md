@@ -48,3 +48,6 @@ Probability of "Stay still" = 0.3
 This distribution indicates that, given the current state, there's a 40% chance that the agent will choose to "Move left," a 30% chance it will "Move right," and a 30% chance it will "Stay still."
 
 So, when the agent observes this state, it consults the stochastic policy and samples an action based on these probabilities. For example, it might randomly select "Move left" 40% of the time, "Move right" 30% of the time, and "Stay still" 30% of the time, ensuring that over many trials, the agent's actions reflect the probabilities specified by the policy.
+
+The Deep means that you use neural networks to figure out reinforcement learning. Otherwise you just create a Q table.
+Great resource for deep learning for coders: https://www.youtube.com/watch?v=8SF_h3xF3cE
