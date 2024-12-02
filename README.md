@@ -51,3 +51,8 @@ So, when the agent observes this state, it consults the stochastic policy and sa
 
 The Deep means that you use neural networks to figure out reinforcement learning. Otherwise you just create a Q table.
 Great resource for deep learning for coders: https://www.youtube.com/watch?v=8SF_h3xF3cE
+
+Basically the video suggests to create a program for figuring out what a bird is vs what a bird isn't
+
+They use duck duck go to search for images of a bird and a forest.
+It then creates a datablock which gives the library we're using enough information to create a computer vision model.
